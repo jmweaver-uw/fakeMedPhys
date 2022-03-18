@@ -1,16 +1,21 @@
-# This is a sample Python script.
+import pandas as pd
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
+def write_to_text(pathList):
+    f = open('titles.txt', 'w')
+    for path in pathList:
+        df = pd.read_csv(path)
+        titles = df.Title
+        for i in range(len(titles)):
+            print(titles[i])
+            f.write('\n')
+            f.write(titles[i])
+    f.close()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
+pathList = ['csv-Medicalphy-set_1974-2011.csv',
+            'csv-Medicalphy-set_2013-2022.csv']
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+write_to_text(pathList)
