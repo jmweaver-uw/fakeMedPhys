@@ -1,4 +1,3 @@
-
 Gel'fand-Graev's reconstruction formula in the 3D real space
 Dynamic CT technique for assessment of wrist joint instabilities
 Iterative correction of beam hardening artifacts in CT

@@ -1,2 +1,8 @@
+# files to ignore
+.DS_Store
+cached*
+
 # directories to ignore
 .idea/
+__pycache__/
+gpt2_test/
