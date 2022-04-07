@@ -6,8 +6,8 @@ gpt2_finetune = pipeline('text-generation',
                          model=model,
                          tokenizer=tokenizer)
 
-seed = "Infant neuroimaging"
+seed = "MPnRAGE:"
 
-test = gpt2_finetune(seed, max_length=20, num_return_sequences=5)
+test = gpt2_finetune(seed, max_length=50, num_return_sequences=5)
 
 print("break")
